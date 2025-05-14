@@ -1,0 +1,29 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { 
+  fadeInDown,
+} from '@/utils/animations'
+
+import Bio from "./../components/about/Bio";
+import Education from "./../components/about/Education";
+import Experience from "./../components/about/Experience";
+import Skills from "./../components/about/Skills";
+
+export default function About() {
+  return (
+    <div className="container max-w-7xl mx-auto py-12">
+      <motion.h1 
+        className="text-4xl font-bold mb-8 text-center"
+        {...fadeInDown}
+      >
+        About Me
+      </motion.h1>
+      
+      <Bio />
+      <Skills />
+      <Experience />
+      <Education />
+    </div>
+  )
+} 

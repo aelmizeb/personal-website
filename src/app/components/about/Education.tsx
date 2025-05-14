@@ -1,0 +1,43 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { 
+  fadeInUp, 
+  fadeIn, 
+  staggerContainer,
+  cardHoverSmall 
+} from '@/utils/animations'
+
+export default function Bio() {
+  return (
+    <motion.section
+      {...fadeIn}
+      transition={{ delay: 0.6 }}
+    >
+      <motion.h2
+        className="section-title"
+        {...fadeInUp}
+      >
+        Education
+      </motion.h2>
+      <motion.div
+        className="max-w-3xl mx-auto"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div
+          className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">Master&apos;s degree in computer engineering</h3>
+          <p className="text-primary mb-2">Mohammed Premier University • 2008 - 2010</p>
+          <p className="text-secondary">
+            Graduated with honors. Focused on software engineering.
+          </p>
+        </motion.div>
+      </motion.div>
+    </motion.section>
+  )
+} 
