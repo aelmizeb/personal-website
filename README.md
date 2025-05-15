@@ -1,7 +1,10 @@
 # Personal Website
 My personal website built with React, GitHub Actions and GitHub Pages.
 
+## 🔎 Preview
 [See result](https://aelmizeb.github.io/personal-website/)
+
+![Preview](./src/assets/img/preview.png)
 
 ## 🚀 Features
 
