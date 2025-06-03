@@ -32,6 +32,6 @@ export const projects: Project[] = [
         technologies: ['Rust', 'egui'],
         githubLink: 'https://github.com/aelmizeb/rust-crypt',
         demoLink: '',
-        image: basePath + 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/refs/heads/main/media/preview-text-encrypt.png',
+        image: 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/refs/heads/main/media/preview-text-encrypt.png',
       },
   ];
