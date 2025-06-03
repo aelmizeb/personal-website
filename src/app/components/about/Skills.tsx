@@ -52,9 +52,9 @@ export default function Skills() {
             <h3 className="text-xl font-semibold mb-2">Backend</h3>
             <ul className="text-secondary space-y-2">
               <li>PHP</li>
-              <li>Magento / Strapi / Drupal</li>
+              <li>Magento / Strapi / Drupal / Wordpress</li>
               <li>Node.js / Express / H3</li>
-              <li>MySQL / Postgres</li>
+              <li>MySQL / Mariadb / Postgres</li>
             </ul>
           </motion.div>
           
@@ -68,7 +68,7 @@ export default function Skills() {
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub / Bitbucket / GitLab</li>
               <li>Docker</li>
-              <li>CI/CD</li>
+              <li>CI/CD / GitHub Actions</li>
               <li>Android / Flutter</li>
             </ul>
           </motion.div>

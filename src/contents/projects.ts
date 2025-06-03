@@ -23,7 +23,7 @@ export const projects: Project[] = [
         description: 'A lightweight tool focused solely on analyzing and visualizing website performance, embeddable anywhere.',
         technologies: ['Node.js', 'Puppeteer', 'Lighthouse', 'node-canvas', 'TypeScript', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/site-metrics-card',
-        demoLink: '',
+        demoLink: 'https://github.com/aelmizeb/site-metrics-card',
         image: basePath + '/projects/site-metrics-card.png',
       },
       {
@@ -32,6 +32,6 @@ export const projects: Project[] = [
         technologies: ['Rust', 'egui'],
         githubLink: 'https://github.com/aelmizeb/rust-crypt',
         demoLink: '',
-        image: basePath + 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/raw/main/media/preview-text-encrypt.png',
+        image: basePath + 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/refs/heads/main/media/preview-text-encrypt.png',
       },
   ];
