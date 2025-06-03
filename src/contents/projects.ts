@@ -8,7 +8,7 @@ export const projects: Project[] = [
         technologies: ['Magento 2', 'PHP', 'ECharts'],
         githubLink: 'https://github.com/aelmizeb/magento2-reports',
         demoLink: '',
-        image: 'https://raw.githubusercontent.com/aelmizeb/magento2-reports/refs/heads/main/view/adminhtml/web/images/preview.png',
+        image: 'https://raw.githubusercontent.com/aelmizeb/magento2-reports/refs/heads/main/view/adminhtml/web/images/preview-dashboard.png',
       },
       {
         title: 'Nuxt Dashboard Template',
