@@ -22,8 +22,16 @@ export const projects: Project[] = [
         title: 'Site Metrics Card',
         description: 'A lightweight tool focused solely on analyzing and visualizing website performance, embeddable anywhere.',
         technologies: ['Node.js', 'Puppeteer', 'Lighthouse', 'node-canvas', 'TypeScript', 'GitHub Actions'],
-        githubLink: 'https://github.com',
+        githubLink: 'https://github.com/aelmizeb/site-metrics-card',
         demoLink: '',
         image: basePath + '/projects/site-metrics-card.png',
+      },
+      {
+        title: 'Rust Crypt: A Customizable Encryptor Built with Rust',
+        description: 'A GUI-based encryption app built with Rust to explore and test the Rust GUI ecosystem.',
+        technologies: ['Rust', 'egui'],
+        githubLink: 'https://github.com/aelmizeb/rust-crypt',
+        demoLink: '',
+        image: basePath + 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/raw/main/media/preview-text-encrypt.png',
       },
   ];
