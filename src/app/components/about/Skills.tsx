@@ -28,20 +28,6 @@ export default function Skills() {
           initial="initial"
           animate="animate"
         >
-          <motion.div 
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <FaCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-            <ul className="text-secondary space-y-2">
-              <li>Vue / Nuxt.js</li>
-              <li>TypeScript / JavaScript</li>
-              <li>Angular</li>
-              <li>HTML5 / CSS3</li>
-            </ul>
-          </motion.div>
           
           <motion.div 
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
@@ -55,6 +41,21 @@ export default function Skills() {
               <li>Magento / Strapi / Drupal / Wordpress</li>
               <li>Node.js / Express / H3</li>
               <li>MySQL / Mariadb / Postgres</li>
+            </ul>
+          </motion.div>
+          
+          <motion.div 
+            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            variants={fadeInUp}
+            {...cardHover}
+          >
+            <FaCode className="h-8 w-8 text-primary mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+            <ul className="text-secondary space-y-2">
+              <li>Vue / Nuxt.js</li>
+              <li>TypeScript / JavaScript</li>
+              <li>Angular</li>
+              <li>HTML5 / CSS3</li>
             </ul>
           </motion.div>
           

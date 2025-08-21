@@ -8,7 +8,7 @@ export const projects: Project[] = [
         technologies: ['Magento 2', 'PHP', 'ECharts'],
         githubLink: 'https://github.com/aelmizeb/magento2-reports',
         demoLink: '',
-        image: 'https://raw.githubusercontent.com/aelmizeb/magento2-reports/refs/heads/main/view/adminhtml/web/images/preview-dashboard.png',
+        image: basePath + '/open-source-projects/magento2-reports.png',
       },
       {
         title: 'Nuxt Dashboard Template',
@@ -16,7 +16,7 @@ export const projects: Project[] = [
         technologies: ['Nuxt 3', 'Vue 3', 'ECharts', 'Tailwind CSS', 'Leaflet', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/nuxt-dashboard',
         demoLink: 'https://aelmizeb.github.io/nuxt-dashboard/',
-        image: 'https://raw.githubusercontent.com/aelmizeb/nuxt-dashboard/main/src/assets/img/preview.png',
+        image: basePath + '/open-source-projects/nuxt-dashboard.png',
       },
       {
         title: 'Site Metrics Card',
@@ -24,7 +24,7 @@ export const projects: Project[] = [
         technologies: ['Node.js', 'Puppeteer', 'Lighthouse', 'node-canvas', 'TypeScript', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/site-metrics-card',
         demoLink: 'https://github.com/aelmizeb/site-metrics-card',
-        image: basePath + '/projects/site-metrics-card.png',
+        image: basePath + '/open-source-projects/website-metrics.svg',
       },
       {
         title: 'Rust Crypt: A Customizable Encryptor Built with Rust',
@@ -32,6 +32,6 @@ export const projects: Project[] = [
         technologies: ['Rust', 'egui'],
         githubLink: 'https://github.com/aelmizeb/rust-crypt',
         demoLink: '',
-        image: 'https://raw.githubusercontent.com/aelmizeb/rust-crypt/refs/heads/main/media/preview-text-encrypt.png',
+        image: basePath + '/open-source-projects/rust-crypt.png',
       },
   ];

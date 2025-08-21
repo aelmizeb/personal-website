@@ -9,6 +9,7 @@ import Bio from "./../components/about/Bio";
 import Education from "./../components/about/Education";
 import Experience from "./../components/about/Experience";
 import Skills from "./../components/about/Skills";
+import Clients from "./../components/about/Clients";
 
 export default function About() {
   return (
@@ -21,6 +22,7 @@ export default function About() {
       </motion.h1>
       
       <Bio />
+      <Clients />
       <Skills />
       <Experience />
       <Education />
