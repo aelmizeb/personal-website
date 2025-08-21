@@ -31,6 +31,7 @@ export default function About() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 className="text-xl font-semibold mb-2">Senior Full Stack Developer</h3>
             <p className="text-primary mb-2">Caudalie • 2019 - 2024</p>
@@ -46,6 +47,7 @@ export default function About() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 className="text-xl font-semibold mb-2">Software Engineer / Technical Lead</h3>
             <p className="text-primary mb-2">Capgemini • 2019</p>
@@ -59,6 +61,7 @@ export default function About() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 className="text-xl font-semibold mb-2">Full Stack Developer</h3>
             <p className="text-primary mb-2">C2S Bouygues • 2018 - 2019</p>
@@ -73,6 +76,7 @@ export default function About() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 className="text-xl font-semibold mb-2">Technical Expert E-commerce</h3>
             <p className="text-primary mb-2">SQLI • 2010 - 2018</p>

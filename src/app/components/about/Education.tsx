@@ -30,6 +30,7 @@ export default function Bio() {
           className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
           {...cardHoverSmall}
+          transition={{ type: "spring", stiffness: 300 }}
         >
           <h3 className="text-xl font-semibold mb-2">Master&apos;s degree in computer engineering</h3>
           <p className="text-primary mb-2">Mohammed Premier University • 2008 - 2010</p>

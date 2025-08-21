@@ -33,12 +33,13 @@ export default function Skills() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHover}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Backend</h3>
             <ul className="text-secondary space-y-2">
               <li>PHP</li>
-              <li>Magento / Strapi / Drupal / Wordpress</li>
+              <li>Magento / Strapi / Drupal / Wordpress / Odoo</li>
               <li>Node.js / Express / H3</li>
               <li>MySQL / Mariadb / Postgres</li>
             </ul>
@@ -48,6 +49,7 @@ export default function Skills() {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHover}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
@@ -58,19 +60,21 @@ export default function Skills() {
               <li>HTML5 / CSS3</li>
             </ul>
           </motion.div>
-          
+
           <motion.div 
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHover}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub / Bitbucket / GitLab</li>
-              <li>Docker</li>
+              <li>Docker / Docker Compose</li>
               <li>CI/CD / GitHub Actions</li>
               <li>Android / Flutter</li>
+              <li>Testing: Jest / Playwright</li>
             </ul>
           </motion.div>
         </motion.div>
