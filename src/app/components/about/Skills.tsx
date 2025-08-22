@@ -38,7 +38,7 @@ export default function Skills() {
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Backend</h3>
             <ul className="text-secondary space-y-2">
-              <li>PHP</li>
+              <li>PHP 7/8</li>
               <li>Magento / Strapi / Drupal / Wordpress / Odoo</li>
               <li>Node.js / Express / H3</li>
               <li>MySQL / Mariadb / Postgres</li>

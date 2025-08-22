@@ -12,8 +12,8 @@ export const projects: Project[] = [
       },
       {
         title: 'Nuxt Dashboard Template',
-        description: 'A Nuxt 3 dashboard template styled with Tailwind CSS and developed with Nuxt 3, ECharts, Leaflet and GitHub Actions.',
-        technologies: ['Nuxt 3', 'Vue 3', 'ECharts', 'Tailwind CSS', 'Leaflet', 'GitHub Actions'],
+        description: 'A Nuxt 4 dashboard template styled with Tailwind CSS and developed with Nuxt 3, ECharts, Leaflet and GitHub Actions.',
+        technologies: ['Nuxt 4', 'Vue 3', 'ECharts', 'Tailwind CSS', 'Leaflet', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/nuxt-dashboard',
         demoLink: 'https://aelmizeb.github.io/nuxt-dashboard/',
         image: basePath + '/open-source-projects/nuxt-dashboard.png',

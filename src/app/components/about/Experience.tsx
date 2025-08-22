@@ -68,6 +68,7 @@ export default function About() {
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>Support for the agency’s clients and participation in pre-sales activities</li>
               <li>Application maintenance of a quality management project for Bouygues Construction</li>
+              <li>Application maintenance of a project for Bouygues Energies & Services</li>
               <li>Application maintenance of a product management project for the publishing house Lito</li>
             </ul>
           </motion.div>

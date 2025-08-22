@@ -36,6 +36,18 @@ export default function Clients() {
             variants={fadeInUp}
           />
           <motion.img 
+            src={`${basePath}/clients/Capgemini.png`} 
+            alt="Capgemini" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Boucheron.svg`} 
+            alt="Boucheron" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
             src={`${basePath}/clients/Buygues-Construction.png`} 
             alt="Buygues Construction" 
             className="object-contain mx-auto"
@@ -60,8 +72,44 @@ export default function Clients() {
             variants={fadeInUp}
           />
           <motion.img 
+            src={`${basePath}/clients/Sqli.png`} 
+            alt="SQLI" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
             src={`${basePath}/clients/Edcon.png`} 
             alt="Edcon" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Boardmans.avif`} 
+            alt="Boardmans - Edcon" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Edgars.avif`} 
+            alt="Edgars - Edcon" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/RedSquare.gif`} 
+            alt="Red Square - Edcon" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Jet.png`} 
+            alt="Jet - Edcon" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/CNA.jpg`} 
+            alt="CNA - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
@@ -78,14 +126,32 @@ export default function Clients() {
             variants={fadeInUp}
           />
           <motion.img 
+            src={`${basePath}/clients/SIA-Home-Fashion.png`} 
+            alt="SIA Home Fashion" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
             src={`${basePath}/clients/Fostplus.png`} 
             alt="Fostplus" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
+            src={`${basePath}/clients/McCover.svg`} 
+            alt="McCover" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
             src={`${basePath}/clients/Ineo.png`} 
             alt="Ineo" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Visaudio.webp`} 
+            alt="Visaudio" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
@@ -110,6 +176,12 @@ export default function Clients() {
           <motion.img 
             src={`${basePath}/clients/Casanet.jpg`} 
             alt="Casanet" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Astalift.png`} 
+            alt="Astalift - Fujifilm" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
