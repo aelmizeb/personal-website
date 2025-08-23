@@ -54,7 +54,7 @@ export default function Skills() {
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2">
-              <li>Vue / Nuxt.js</li>
+              <li>Vue / Nuxt</li>
               <li>TypeScript / JavaScript</li>
               <li>Angular</li>
               <li>HTML5 / CSS3</li>
@@ -74,7 +74,7 @@ export default function Skills() {
               <li>Docker / Docker Compose</li>
               <li>CI/CD / GitHub Actions</li>
               <li>Android / Flutter</li>
-              <li>Testing: Jest / Playwright</li>
+              <li>Jest / Playwright</li>
             </ul>
           </motion.div>
         </motion.div>

@@ -16,8 +16,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdellatif EL MIZEB Portfolio Website",
-  description: "Abdellatif EL MIZEB portfolio website using Next.js, Tailwind CSS, and Framer Motion.",
+  title: "Abdellatif EL MIZEB | Portfolio",
+  description: "Software Engineer specializing in Magento, Vue, Nuxt, and Cloud solutions.",
+  keywords: ["Abdellatif EL MIZEB", "Magento", "Nuxt", "Vue", "Strapi", "Developer","Lead Developer", "Portfolio", "Web Development"],
+  openGraph: {
+    title: "Abdellatif EL MIZEB | Portfolio",
+    description: "Lead & Fullstack developer",
+    url: "https://abdellatifelmizeb.com",
+    siteName: "Abdellatif Portfolio",
+    images: [
+      {
+        url: "https://abdellatifelmizeb.com/profile.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  /*twitter: {
+    card: "summary_large_image",
+    site: "@yourtwitter",
+    title: "Abdellatif EL MIZEB | Portfolio",
+    description: "Lead & Fullstack developer",
+    images: ["https://abdellatifelmizeb.com/profile.png"],
+  },*/
 };
 
 export default function RootLayout({
