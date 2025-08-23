@@ -17,7 +17,8 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src={`${basePath}/profile.png`} alt="Profile" width={100} height={100} className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
+            <Image src={`${basePath}/profile.webp`} alt="Abdellatif EL MIZEB" width={100} height={100} 
+              className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -48,6 +49,7 @@ export default function Hero() {
               href="https://github.com/aelmizeb"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
@@ -58,6 +60,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/abdellatifelmizeb"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}

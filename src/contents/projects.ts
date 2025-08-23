@@ -8,7 +8,7 @@ export const projects: Project[] = [
         technologies: ['Magento 2', 'PHP', 'ECharts'],
         githubLink: 'https://github.com/aelmizeb/magento2-reports',
         demoLink: '',
-        image: basePath + '/open-source-projects/magento2-reports.png',
+        image: basePath + '/open-source-projects/magento2-reports.webp',
       },
       {
         title: 'Nuxt Dashboard Template',
@@ -16,7 +16,7 @@ export const projects: Project[] = [
         technologies: ['Nuxt 4', 'Vue 3', 'ECharts', 'Tailwind CSS', 'Leaflet', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/nuxt-dashboard',
         demoLink: 'https://aelmizeb.github.io/nuxt-dashboard/',
-        image: basePath + '/open-source-projects/nuxt-dashboard.png',
+        image: basePath + '/open-source-projects/nuxt-dashboard.webp',
       },
       {
         title: 'Site Metrics Card',
@@ -24,7 +24,7 @@ export const projects: Project[] = [
         technologies: ['Node.js', 'Puppeteer', 'Lighthouse', 'node-canvas', 'TypeScript', 'GitHub Actions'],
         githubLink: 'https://github.com/aelmizeb/site-metrics-card',
         demoLink: 'https://github.com/aelmizeb/site-metrics-card',
-        image: basePath + '/open-source-projects/website-metrics.svg',
+        image: basePath + '/open-source-projects/website-metrics.webp',
       },
       {
         title: 'Rust Crypt: A Customizable Encryptor Built with Rust',
@@ -32,6 +32,6 @@ export const projects: Project[] = [
         technologies: ['Rust', 'egui'],
         githubLink: 'https://github.com/aelmizeb/rust-crypt',
         demoLink: '',
-        image: basePath + '/open-source-projects/rust-crypt.png',
+        image: basePath + '/open-source-projects/rust-crypt.webp',
       },
   ];

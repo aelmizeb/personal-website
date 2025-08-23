@@ -30,121 +30,121 @@ export default function Clients() {
           animate="animate"
         >
           <motion.img 
-            src={`${basePath}/clients/Caudalie.png`} 
+            src={`${basePath}/clients/Caudalie.webp`} 
             alt="Caudalie" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Capgemini.png`} 
+            src={`${basePath}/clients/Capgemini.webp`} 
             alt="Capgemini" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Boucheron.svg`} 
+            src={`${basePath}/clients/Boucheron.webp`} 
             alt="Boucheron" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Buygues-Construction.png`} 
+            src={`${basePath}/clients/Buygues-Construction.webp`} 
             alt="Buygues Construction" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/BTBusiness-Solution.png`} 
+            src={`${basePath}/clients/BTBusiness-Solution.webp`} 
             alt="Buygues Telecom Business Solution" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Buygues-Energy-Services.png`} 
+            src={`${basePath}/clients/Buygues-Energy-Services.webp`} 
             alt="Buygues Energy & Services" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Editions-Lito.png`} 
+            src={`${basePath}/clients/Editions-Lito.webp`} 
             alt="Editions Lito" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Sqli.png`} 
+            src={`${basePath}/clients/Sqli.webp`} 
             alt="SQLI" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Edcon.png`} 
+            src={`${basePath}/clients/Edcon.webp`} 
             alt="Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Boardmans.avif`} 
+            src={`${basePath}/clients/Boardmans.webp`} 
             alt="Boardmans - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Edgars.avif`} 
+            src={`${basePath}/clients/Edgars.webp`} 
             alt="Edgars - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/RedSquare.gif`} 
+            src={`${basePath}/clients/RedSquare.webp`} 
             alt="Red Square - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Jet.png`} 
+            src={`${basePath}/clients/Jet.webp`} 
             alt="Jet - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/CNA.jpg`} 
+            src={`${basePath}/clients/CNA.webp`} 
             alt="CNA - Edcon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Mathon.png`} 
+            src={`${basePath}/clients/Mathon.webp`} 
             alt="Mathon" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Sodebo.jpeg`} 
+            src={`${basePath}/clients/Sodebo.webp`} 
             alt="Sodebo" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/SIA-Home-Fashion.png`} 
+            src={`${basePath}/clients/SIA-Home-Fashion.webp`} 
             alt="SIA Home Fashion" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Fostplus.png`} 
+            src={`${basePath}/clients/Fostplus.webp`} 
             alt="Fostplus" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/McCover.svg`} 
+            src={`${basePath}/clients/McCover.webp`} 
             alt="McCover" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Ineo.png`} 
+            src={`${basePath}/clients/Ineo.webp`} 
             alt="Ineo" 
             className="object-contain mx-auto"
             variants={fadeInUp}
@@ -156,55 +156,55 @@ export default function Clients() {
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Cedeo.png`} 
+            src={`${basePath}/clients/Cedeo.webp`} 
             alt="Cedeo" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Siblu.png`} 
+            src={`${basePath}/clients/Siblu.webp`} 
             alt="Siblu" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Victor-Rolf.png`} 
+            src={`${basePath}/clients/Victor-Rolf.webp`} 
             alt="Victor & Rolf" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Casanet.jpg`} 
+            src={`${basePath}/clients/Casanet.webp`} 
             alt="Casanet" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Astalift.png`} 
+            src={`${basePath}/clients/Astalift.webp`} 
             alt="Astalift - Fujifilm" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Diac.png`} 
+            src={`${basePath}/clients/Diac.webp`} 
             alt="Diac" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/RCI-Banque.png`} 
+            src={`${basePath}/clients/RCI-Banque.webp`} 
             alt="RCI Banque" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Sogeprom.png`} 
+            src={`${basePath}/clients/Sogeprom.webp`} 
             alt="Sogeprom" 
             className="object-contain mx-auto"
             variants={fadeInUp}
           />
           <motion.img 
-            src={`${basePath}/clients/Credit-Agricole.png`} 
+            src={`${basePath}/clients/Credit-Agricole.webp`} 
             alt="Credit Agricole" 
             className="object-contain mx-auto"
             variants={fadeInUp}

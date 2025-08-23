@@ -16,6 +16,7 @@ export default function Footer() {
               href="https://github.com/aelmizeb"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile"
               className="text-secondary hover:text-primary transition-colors"
             >
               <FaGithub className="h-6 w-6" />
@@ -24,6 +25,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/abdellatifelmizeb"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               className="text-secondary hover:text-primary transition-colors"
             >
               <FaLinkedin className="h-6 w-6" />
