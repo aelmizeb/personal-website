@@ -1,9 +1,13 @@
-'use client'
-import Link from 'next/link'
-import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useTheme } from '../context/ThemeContext'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useTheme } from '../context/ThemeContext';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -24,7 +28,7 @@ export default function Navbar() {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-primary">
-            Abdellatif EL MIZEB
+            <Image src={`${basePath}/logo.webp`} alt="Abdellatif EL MIZEB" width={80} height={50} />
           </Link>
           
           {/* Desktop Menu */}

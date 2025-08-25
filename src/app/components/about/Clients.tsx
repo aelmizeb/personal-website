@@ -156,6 +156,18 @@ export default function Clients() {
             variants={fadeInUp}
           />
           <motion.img 
+            src={`${basePath}/clients/Saint-Gobain.webp`} 
+            alt="Saint Gobain" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          <motion.img 
+            src={`${basePath}/clients/Socodei.webp`} 
+            alt="Socodei" 
+            className="object-contain mx-auto"
+            variants={fadeInUp}
+          />
+          {/* <motion.img 
             src={`${basePath}/clients/Cedeo.webp`} 
             alt="Cedeo" 
             className="object-contain mx-auto"
@@ -166,7 +178,7 @@ export default function Clients() {
             alt="Siblu" 
             className="object-contain mx-auto"
             variants={fadeInUp}
-          />
+          /> */}
           <motion.img 
             src={`${basePath}/clients/Victor-Rolf.webp`} 
             alt="Victor & Rolf" 
