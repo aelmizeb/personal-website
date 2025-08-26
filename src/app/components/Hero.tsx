@@ -17,7 +17,7 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src={`${basePath}/profile.webp`} alt="Abdellatif EL MIZEB" width={100} height={100} 
+            <Image src={`${basePath}/profile.webp`} alt="Abdellatif EL MIZEB" width={100} height={100} priority
               className="rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 

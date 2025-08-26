@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/about',
     '/projects',
+    '/privacy-policy',
   ];
 
   // Create sitemap entries for static routes
