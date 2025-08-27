@@ -1,4 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { articles } from '@/contents/articles';
+import { Article } from '@/types';
+import { Routes } from '@/utils/routes';
 
 export const dynamic = "force-static";
 
@@ -7,12 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
   // Define static routes
-  const routes: string[] = [
-    '',
-    '/about',
-    '/projects',
-    '/privacy-policy',
-  ];
+  const routes: string[] = Routes.map(route => route.href);
 
   // Create sitemap entries for static routes
   const staticRoutesSitemap = routes.map((route) => ({
@@ -22,5 +20,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === '' ? 1 : 0.8,
   }));
 
-  return staticRoutesSitemap;
+  // Create sitemap entries for articles
+  const articlesSitemap = articles.map((article: Article) => ({
+    url: `${siteUrl}/articles/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  // Combine static and dynamic routes
+  return [
+    ...staticRoutesSitemap,
+    ...articlesSitemap
+  ];
 }

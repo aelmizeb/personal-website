@@ -23,7 +23,7 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Here are some of my recent projects. Click on the links to view the code or live demo.
+        Explore a selection of my recent open-source projects, with links to both the source code and live demos where available.
       </motion.p>
       
       <motion.div 

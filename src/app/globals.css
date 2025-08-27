@@ -62,3 +62,127 @@ a {
     opacity: 1;
   }
 }
+
+pre {
+  background-color: #f3f4f6; /* light */
+  color: #1f2937; /* neutral text */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+.dark pre {
+  background-color: #1f2937; /* dark */
+  color: #f9fafb; /* light text */
+}
+
+/* Base article content */
+article {
+  max-width: 70ch;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #1f2937; /* gray-800 */
+}
+
+.dark article {
+  color: #e5e7eb; /* gray-200 */
+}
+
+/* Article images */
+.articles img {
+  max-width: 100%; /* ensures image doesn't overflow container */
+  height: auto;    /* maintain aspect ratio */
+  display: block;  /* removes inline spacing */
+  margin: 1.5rem auto; /* spacing around image */
+  border-radius: 0.5rem; /* optional: rounded corners */
+  object-fit: cover;
+}
+
+/* On mobile screens, optionally make images smaller or full width */
+@media (max-width: 640px) {
+  .articles img {
+    width: 100%;      /* full width on mobile */
+    margin: 1rem 0;   /* less vertical spacing */
+  }
+}
+
+/* Optional: dark mode adjustments for images with border or shadow */
+.dark .articles img {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Headings */
+article h2 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+article h3 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+article p {
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+article ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+article a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+}
+
+.dark article a {
+  color: #60a5fa; /* blue-400 */
+}
+
+/* Inline code */
+article code {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #111827; /* gray-900 */
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875em;
+}
+
+.dark article code {
+  background-color: #1f2937; /* gray-800 */
+  color: #f9fafb; /* gray-50 */
+}
+
+/* Block code */
+article pre {
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.dark article pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+}

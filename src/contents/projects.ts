@@ -1,5 +1,5 @@
 import { Project } from "@/types";
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { basePath } from '@/utils/constants';
 
 export const projects: Project[] = [
     {

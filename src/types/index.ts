@@ -6,3 +6,12 @@ export interface Project {
   demoLink: string;
   image: string;
 }
+
+export type Article = {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  content: string;
+  image: string;
+}

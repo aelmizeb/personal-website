@@ -1,13 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { basePath } from '@/utils/constants';
 import { 
   fadeInUp,
   fadeIn, 
   staggerContainer, 
-} from '@/utils/animations'
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+} from '@/utils/animations';
 
 export default function Clients() {
   return (

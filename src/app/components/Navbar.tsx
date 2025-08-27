@@ -6,6 +6,7 @@ import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/out
 import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { Routes } from '@/utils/routes';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -17,13 +18,6 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const menuItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/privacy-policy', label: 'Privacy Policy' },
-  ];
-
   return (
     <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
       <div className="container max-w-7xl mx-auto px-4">
@@ -31,10 +25,10 @@ export default function Navbar() {
           <Link href="/" className="text-xl font-bold text-primary">
             <Image src={`${basePath}/logo.webp`} alt="Abdellatif EL MIZEB" width={80} height={50} priority />
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
+            {Routes.map((item) => (
               <Link 
                 key={item.href}
                 href={item.href} 
@@ -85,7 +79,7 @@ export default function Navbar() {
               className="md:hidden"
             >
               <div className="py-4 space-y-4">
-                {menuItems.map((item, index) => (
+                {Routes.map((item, index) => (
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, x: -20 }}
@@ -104,7 +98,7 @@ export default function Navbar() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: menuItems.length * 0.1 }}
+                  transition={{ delay: Routes.length * 0.1 }}
                 >
                   <button
                     onClick={() => {
