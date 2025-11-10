@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
-import { articles } from '@/contents/articles';
 import { Article } from '@/types';
 import { Routes } from '@/utils/routes';
+import { getArticles } from '@/utils/firebase';
 
 export const dynamic = "force-static";
 
@@ -20,10 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === '' ? 1 : 0.8,
   }));
 
-  // Create sitemap entries for articles
-  const articlesSitemap = articles.map((article: Article) => ({
+  // Fetch articles from Firebase
+  const articles: Article[] = await getArticles();
+
+  const articlesSitemap = articles.map(article => ({
     url: `${siteUrl}/articles/${article.slug}`,
-    lastModified: new Date(article.date),
+    lastModified: article.date ? new Date(article.date) : new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
