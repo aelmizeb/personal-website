@@ -2,11 +2,11 @@ import {
   fadeInDown,
 } from '@/utils/animations'
 
-import Bio from "./../components/about/Bio";
-import Education from "./../components/about/Education";
-import Experience from "./../components/about/Experience";
-import Skills from "./../components/about/Skills";
-import Clients from "./../components/about/Clients";
+import Bio from "../../components/about/Bio";
+import Education from "../../components/about/Education";
+import Experience from "../../components/about/Experience";
+import Skills from "../../components/about/Skills";
+import Clients from "../../components/about/Clients";
 
 export default function About() {
   return (
