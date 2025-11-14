@@ -1,15 +1,5 @@
-import Hero from "./components/home/Hero";
-import Clients from "./components/about/Clients";
-import Skills from "./components/about/Skills";
-import Projects from "./components/Projects";
+import { redirect } from 'next/navigation';
 
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <Clients />
-      <Skills />
-      <Projects />
-    </main>
-  );
-} 
+  redirect('/en'); // default language
+}

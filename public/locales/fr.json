@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Salut, je suis",
+    "subtitle": "Développeur Full Stack et Lead | Contributeur Open Source"
+  },
+  "navbar": {
+    "logoAlt": "Site portfolio d'Abdellatif EL MIZEB",
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "articles": "Articles",
+    "privacy-policy": "Politique de confidentialité",
+    "contact": "Contact",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  }
+}

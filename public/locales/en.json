@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Hi, I'm",
+    "subtitle": "Lead and Full Stack Developer | Open Source Contributor"
+  },
+  "navbar": {
+    "logoAlt": "Abdellatif EL MIZEB portfolio website",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "articles": "Articles",
+    "privacy-policy": "Privacy Policy",
+    "contact": "Contact",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  }
+}
