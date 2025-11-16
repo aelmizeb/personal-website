@@ -1,20 +1,23 @@
 'use client'
 
-import Image from 'next/image'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
-import { getProjects } from '@/utils/firebase'
-import { useEffect, useState } from 'react'
-import type { Project } from '@/types'
-import { basePath } from '@/utils/constants'
+import Image from 'next/image';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { fadeInUp, staggerContainer } from '@/utils/animations';
+import { getProjects } from '@/utils/firebase';
+import { useEffect, useState } from 'react';
+import type { Project } from '@/types';
+import { basePath } from '@/utils/constants';
+import { t } from 'i18next';
+import { useLanguage } from '@/app/context/LanguageContext';
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([])
+  const [projects, setProjects] = useState<Project[]>([]);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await getProjects()
+      const data = await getProjects(lang)
       setProjects(data)
     }
     fetchProjects()
@@ -27,7 +30,7 @@ export default function Projects() {
           className="text-3xl font-bold mb-12 text-center"
           {...fadeInUp}
         >
-          Featured Open Source Projects
+          {t('common.featuredOpenSourceProjects')}
         </motion.h2>
 
         <motion.div 

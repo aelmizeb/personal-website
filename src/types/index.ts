@@ -15,3 +15,9 @@ export type Article = {
   content: string;
   image: string;
 }
+
+export type Page = {
+  slug: string;
+  title: string;
+  content: string;
+}

@@ -7,8 +7,13 @@ import {
   staggerContainer,
   cardHoverSmall 
 } from '@/utils/animations'
+import { useTranslation } from 'react-i18next';
 
 export default function Bio() {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <p>Loading...</p>;
+
   return (
     <motion.section
       {...fadeIn}
@@ -18,7 +23,7 @@ export default function Bio() {
         className="section-title"
         {...fadeInUp}
       >
-        Education
+        {t('common.education')}
       </motion.h2>
       <motion.div
         className="max-w-3xl mx-auto"

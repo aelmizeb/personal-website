@@ -1,38 +1,51 @@
-import type { MetadataRoute } from 'next';
-import { Article } from '@/types';
-import { Routes } from '@/utils/routes';
-import { getArticles } from '@/utils/firebase';
-
 export const dynamic = "force-static";
+export const revalidate = false;
+
+import { MetadataRoute } from "next";
+import { getArticles } from "@/utils/firebase";
+import { Routes } from "@/utils/routes";
+import { langs } from "@/utils/constants";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Use the full domain of your website from an env variable
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-  // Define static routes
-  const routes: string[] = Routes.map(route => route.href);
+  // --- Static routes ---
+  const staticRoutes = Routes.flatMap((route) =>
+    langs.map((locale) => {
+      // Special handling for homepage
+      if (route.label === "home") {
+        return {
+          url: locale === "en" ? `${siteUrl}` : `${siteUrl}/${locale}`,
+          lastModified: new Date(),
+          changeFrequency: "monthly" as const,
+          priority: 1,
+        };
+      }
 
-  // Create sitemap entries for static routes
-  const staticRoutesSitemap = routes.map((route) => ({
-    url: `${siteUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1 : 0.8,
-  }));
+      return {
+        url: `${siteUrl}/${locale}${route.href[locale]}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      };
+    })
+  );
 
-  // Fetch articles from Firebase
-  const articles: Article[] = await getArticles();
+  // --- Articles per language ---
+  let articleRoutes: MetadataRoute.Sitemap = [];
 
-  const articlesSitemap = articles.map(article => ({
-    url: `${siteUrl}/articles/${article.slug}`,
-    lastModified: article.date ? new Date(article.date) : new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  for (const lang of langs) {
+    const articles = await getArticles(lang);
 
-  // Combine static and dynamic routes
-  return [
-    ...staticRoutesSitemap,
-    ...articlesSitemap
-  ];
+    const languageArticleRoutes = articles.map((article) => ({
+      url: `${siteUrl}/${lang}/articles/${article.slug}`,
+      lastModified: article.date ? new Date(article.date) : new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+
+    articleRoutes.push(...languageArticleRoutes);
+  }
+
+  return [...staticRoutes, ...articleRoutes];
 }

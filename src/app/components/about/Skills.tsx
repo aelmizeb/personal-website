@@ -8,8 +8,13 @@ import {
   staggerContainer, 
   cardHover, 
 } from '@/utils/animations'
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <p>Loading...</p>;
+
   return (
       <motion.section 
         className="mb-16"
@@ -20,7 +25,7 @@ export default function Skills() {
           className="section-title"
           {...fadeInUp}
         >
-          Skills
+          {t('common.skills')}
         </motion.h2>
         <motion.div 
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -36,11 +41,11 @@ export default function Skills() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('common.backend')}</h3>
             <ul className="text-secondary space-y-2">
               <li>PHP 7/8 / Python / Java</li>
               <li>Magento / Adobe Commerce / Mage-OS</li>
-              <li>Strapi / Drupal / Wordpress / Odoo</li>
+              <li>Strapi / Drupal / Prestashop / Wordpress / Odoo</li>
               <li>Node.js / Express / H3</li>
               <li>MySQL / Mariadb / Postgres / SQLite</li>
             </ul>
@@ -53,9 +58,9 @@ export default function Skills() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <FaCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('common.frontend')}</h3>
             <ul className="text-secondary space-y-2">
-              <li>Vue / Nuxt</li>
+              <li>Vue / Nuxt / React / Next</li>
               <li>TypeScript / JavaScript</li>
               <li>Angular</li>
               <li>HTML5 / CSS3</li>
@@ -69,7 +74,7 @@ export default function Skills() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
+            <h3 className="text-xl font-semibold mb-2">{t('common.toolsAndOthers')}</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub / Bitbucket / GitLab</li>
               <li>Docker / Docker Compose</li>

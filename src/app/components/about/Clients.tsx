@@ -7,8 +7,13 @@ import {
   fadeIn, 
   staggerContainer, 
 } from '@/utils/animations';
+import { useTranslation } from 'react-i18next';
 
 export default function Clients() {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <p>Loading...</p>;
+
   return (
     <>
       <motion.section 
@@ -20,7 +25,7 @@ export default function Clients() {
           className="section-title"
           {...fadeInUp}
         >
-          Clients
+          {t('common.clients')}
         </motion.h2>
         <motion.div 
           className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center bg-white p-8 rounded-lg shadow-lg"

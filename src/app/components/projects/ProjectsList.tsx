@@ -1,24 +1,27 @@
 'use client'
 
-import Image from 'next/image'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
-import { getProjects } from '@/utils/firebase'
-import { useEffect, useState } from 'react'
-import type { Project } from '@/types'
-import { basePath } from '@/utils/constants'
+import Image from 'next/image';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { staggerContainer } from '@/utils/animations';
+import { getProjects } from '@/utils/firebase';
+import { useEffect, useState } from 'react';
+import type { Project } from '@/types';
+import { basePath } from '@/utils/constants';
+import { t } from 'i18next';
+import { useLanguage } from '@/app/context/LanguageContext';
 
-export default function Projects() {
+export default function ProjectsList() {
   const [projects, setProjects] = useState<Project[]>([])
+  const {lang} = useLanguage();
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const data = await getProjects()
+      const data = await getProjects(lang)
       setProjects(data)
     }
     fetchProjects()
-  }, [])
+  }, [lang])
 
   return (
     <div className="container max-w-7xl mx-auto py-12">
@@ -28,7 +31,7 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        My Projects
+        {t('projects.myProjects')}
       </motion.h1>
       <motion.p 
         className="text-lg text-secondary mb-24 text-center"
@@ -36,7 +39,7 @@ export default function Projects() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Explore a selection of my recent open-source projects, with links to both the source code and live demos where available.
+        {t('projects.description')}
       </motion.p>
       
       <motion.div 
@@ -121,7 +124,7 @@ export default function Projects() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaGithub className="h-5 w-5" />
-                    <span>Code</span>
+                    <span>{t('projects.sourceCode')}</span>
                   </motion.a>
                   {project.demoLink?.trim() && (
                     <motion.a
@@ -133,7 +136,7 @@ export default function Projects() {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaExternalLinkAlt className="h-5 w-5" />
-                      <span>Live Demo</span>
+                      <span>{t('projects.liveDemo')}</span>
                     </motion.a>
                   )}
                 </motion.div>
@@ -143,5 +146,5 @@ export default function Projects() {
         })}
       </motion.div>
     </div>
-  )
+  );
 }

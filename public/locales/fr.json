@@ -1,0 +1,46 @@
+{
+  "common": {
+    "articles": "Articles",
+    "readMore": "Lire la suite →",
+    "loading": "Chargement...",
+    "notFound": "Page non trouvée.",
+    "clients": "Clients",
+    "education": "Parcours éducatif",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "featuredOpenSourceProjects": "Projets Open Source",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "toolsAndOthers": "Outils et autres"
+  },
+  "navbar": {
+    "logoAlt": "Site portfolio d'Abdellatif EL MIZEB",
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "articles": "Articles",
+    "privacy-policy": "Politique de confidentialité",
+    "contact": "Contact",
+    "switchToLight": "Passer en mode clair",
+    "switchToDark": "Passer en mode sombre",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  },
+  "projects": {
+    "myProjects": "Mes Projets",
+    "description": "Explorez une sélection de mes projets open-source récents, avec des liens vers le code source et des démonstrations en direct lorsque disponibles.",
+    "viewProject": "Voir le projet",
+    "liveDemo": "Démo en direct",
+    "sourceCode": "Code source"
+  },
+  "hero": {
+    "title": "Salut, je suis",
+    "subtitle": "Développeur Full Stack et Lead | Contributeur Open Source"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur Full Stack et Lead passionné, expert dans la création d'applications web modernes. Bien que je travaille principalement en backend, je suis très enthousiaste à propos des technologies frontend. Mes compétences incluent PHP, Magento, Drupal, Prestashop, JavaScript, TypeScript, Nuxt, Vue, MySQL, Android, Flutter, Strapi. De plus, j'aime contribuer à la communauté open source."
+  }
+}
