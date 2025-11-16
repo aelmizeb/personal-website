@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '@/utils/animations';
+import { staggerContainer } from '@/utils/animations';
 import { getProjects } from '@/utils/firebase';
 import { useEffect, useState } from 'react';
 import type { Project } from '@/types';
@@ -11,9 +11,9 @@ import { basePath } from '@/utils/constants';
 import { t } from 'i18next';
 import { useLanguage } from '@/app/context/LanguageContext';
 
-export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const { lang } = useLanguage();
+export default function ProjectsList() {
+  const [projects, setProjects] = useState<Project[]>([])
+  const {lang} = useLanguage();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -21,71 +21,85 @@ export default function Projects() {
       setProjects(data)
     }
     fetchProjects()
-  }, [])
+  }, [lang])
 
   return (
-    <section className="py-20">
-      <div className="container max-w-7xl mx-auto px-4">
-        <motion.h2 
-          className="text-3xl font-bold mb-12 text-center"
-          {...fadeInUp}
-        >
-          {t('common.featuredOpenSourceProjects')}
-        </motion.h2>
+    <div className="container max-w-7xl mx-auto py-12">
+      <motion.h1 
+        className="text-4xl font-bold mb-4 text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {t('projects.myProjects')}
+      </motion.h1>
+      <motion.p 
+        className="text-lg text-secondary mb-24 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {t('projects.description')}
+      </motion.p>
+      
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        variants={staggerContainer}
+        initial="initial"
+        animate={projects.length > 0 ? "animate" : "initial"}
+      >
+        {projects.map((project, index) => {
+          const imageSrc = project.image?.startsWith("http")
+            ? project.image
+            : `${basePath}${project.image}`
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={staggerContainer}
-          initial="initial"
-          animate={projects.length > 0 ? "animate" : "initial"}
-        >
-          {projects.map((project, index) => {
-            const imageSrc = project.image?.startsWith('http') 
-              ? project.image 
-              : `${basePath}${project.image}`
-
-            return (
-              <motion.article
-                key={project.title}
-                className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, type: 'spring', stiffness: 300 }}
-                whileHover={{ scale: 1.03 }}
+          return (
+            <motion.div
+              key={index}
+              className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
+              transition={{ type: "spring", stiffness: 300 }}
+              
+            >
+              <motion.div 
+                className="aspect-video bg-gray-200 dark:bg-gray-800"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={imageSrc}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
+                <Image
+                  src={imageSrc}
+                  alt={project.title}
+                  className="object-cover w-full h-full"
+                  width={500}
+                  height={500}
+                />
+              </motion.div>
+              
+              <div className="p-6">
                 <motion.h3 
                   className="text-xl font-semibold mb-2"
                   whileHover={{ x: 5 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
                   {project.title}
                 </motion.h3>
                 <motion.p 
-                  className="text-gray-600 dark:text-gray-300 mb-4"
+                  className="text-secondary mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
                   {project.description}
                 </motion.p>
+                
                 <motion.div 
                   className="flex flex-wrap gap-2 mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
                 >
-                  {project.technologies.map((tech) => (
+                  {project.technologies.map((tech, techIndex) => (
                     <motion.span
-                      key={tech}
+                      key={techIndex}
                       className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -94,6 +108,7 @@ export default function Projects() {
                     </motion.span>
                   ))}
                 </motion.div>
+                
                 <motion.div 
                   className="flex gap-4"
                   initial={{ opacity: 0 }}
@@ -109,7 +124,7 @@ export default function Projects() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaGithub className="h-5 w-5" />
-                    <span>Code</span>
+                    <span>{t('projects.sourceCode')}</span>
                   </motion.a>
                   {project.demoLink?.trim() && (
                     <motion.a
@@ -121,15 +136,15 @@ export default function Projects() {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaExternalLinkAlt className="h-5 w-5" />
-                      <span>Live Demo</span>
+                      <span>{t('projects.liveDemo')}</span>
                     </motion.a>
                   )}
                 </motion.div>
-              </motion.article>
-            )
-          })}
-        </motion.div>
-      </div>
-    </section>
-  )
+              </div>
+            </motion.div>
+          )
+        })}
+      </motion.div>
+    </div>
+  );
 }

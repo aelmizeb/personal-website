@@ -5,7 +5,9 @@ import AnimatedSocialLinks from './AnimatedSocialLinks';
 import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <p>Loading...</p>;
 
   return (
     <section className="py-28">

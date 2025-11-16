@@ -7,8 +7,13 @@ import {
   staggerContainer,
   cardHoverSmall 
 } from '@/utils/animations'
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <p>Loading...</p>;
+
   return (
     <motion.section 
         className="mb-16"
@@ -19,7 +24,7 @@ export default function About() {
           className="section-title"
           {...fadeInUp}
         >
-          Experience
+          {t('common.experience')}
         </motion.h2>
         <motion.div 
           className="max-w-3xl mx-auto space-y-8"
