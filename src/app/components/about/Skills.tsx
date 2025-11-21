@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 export default function Skills() {
   const { t, ready } = useTranslation();
 
-  if (!ready) return <p>Loading...</p>;
+  if (!ready) return null;
 
   return (
       <motion.section 

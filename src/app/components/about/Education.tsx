@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 export default function Bio() {
   const { t, ready } = useTranslation();
 
-  if (!ready) return <p>Loading...</p>;
+  if (!ready) return null;
 
   return (
     <motion.section

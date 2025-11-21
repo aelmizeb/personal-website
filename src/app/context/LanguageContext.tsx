@@ -26,17 +26,17 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
 
   const [lang, setLangState] = useState<Lang>("en");
 
-  // ✔ Sync to URL + sync to i18next
+  // Sync to URL + sync to i18next
   useEffect(() => {
     const detected = detectFromUrl();
     setLangState(detected);
-    i18next.changeLanguage(detected);  // 🔥 FIX
+    i18next.changeLanguage(detected);
   }, [pathname]);
 
-  // ✔ Redirect and sync i18next when switching
+  // Redirect and sync i18next when switching
   const switchLang = (newLang: Lang) => {
     setLangState(newLang);
-    i18next.changeLanguage(newLang);  // 🔥 FIX
+    i18next.changeLanguage(newLang);
     router.push(`/${newLang}`);       // always home, no subpath
   };
 

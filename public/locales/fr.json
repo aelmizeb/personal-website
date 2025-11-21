@@ -11,7 +11,9 @@
     "featuredOpenSourceProjects": "Projets Open Source",
     "backend": "Backend",
     "frontend": "Frontend",
-    "toolsAndOthers": "Outils et autres"
+    "toolsAndOthers": "Outils et autres",
+    "learnMore": "En savoir plus",
+    "cookiesMessage": "Ce site utilise des cookies pour améliorer l'expérience utilisateur."
   },
   "navbar": {
     "logoAlt": "Site portfolio d'Abdellatif EL MIZEB",
@@ -42,5 +44,8 @@
   "about": {
     "title": "À propos de moi",
     "description": "Je suis un développeur Full Stack et Lead passionné, expert dans la création d'applications web modernes. Bien que je travaille principalement en backend, je suis très enthousiaste à propos des technologies frontend. Mes compétences incluent PHP, Magento, Drupal, Prestashop, JavaScript, TypeScript, Nuxt, Vue, MySQL, Android, Flutter, Strapi. De plus, j'aime contribuer à la communauté open source."
+  },
+  "footer": {
+    "text": "Site portfolio d'Abdellatif EL MIZEB"
   }
 }

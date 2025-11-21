@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 export default function Hero() {
   const { t, ready } = useTranslation();
 
-  if (!ready) return <p>Loading...</p>;
+  if (!ready) return <p>...</p>;
 
   return (
     <section className="py-28">

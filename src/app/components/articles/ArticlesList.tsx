@@ -7,22 +7,26 @@ import { fadeInDown } from '@/utils/animations';
 import { Article } from "@/types";
 import { getArticles } from "@/utils/firebase";
 import { useLanguage } from '../../context/LanguageContext';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function ArticlesList() {
+  const { t, ready } = useTranslation();
   const { lang } = useLanguage();
+
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!ready) return;
+
+    setLoading(true);
     getArticles(lang)
       .then(setArticles)
       .catch(err => console.error('Error loading articles:', err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [lang, ready]);
 
-  if (loading) return <p className="text-center py-12">{t('common.loading')}</p>;
-
+  if (!ready) return null;
 
   return (
     <div className="container max-w-7xl mx-auto py-12">

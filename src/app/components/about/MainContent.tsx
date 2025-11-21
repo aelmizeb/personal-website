@@ -11,7 +11,7 @@ import Clients from "./Clients";
 export default function MainContent() {
   const { t, ready } = useTranslation();
 
-  if (!ready) return <p>Loading...</p>;
+  if (!ready) return <p>...</p>;
 
   return (
     <div className="container max-w-7xl mx-auto py-12">

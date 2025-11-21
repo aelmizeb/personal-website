@@ -8,10 +8,11 @@ import { getProjects } from '@/utils/firebase';
 import { useEffect, useState } from 'react';
 import type { Project } from '@/types';
 import { basePath } from '@/utils/constants';
-import { t } from 'i18next';
 import { useLanguage } from '@/app/context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectsList() {
+  const { t, ready } = useTranslation();
   const [projects, setProjects] = useState<Project[]>([])
   const {lang} = useLanguage();
 
@@ -21,7 +22,9 @@ export default function ProjectsList() {
       setProjects(data)
     }
     fetchProjects()
-  }, [lang])
+  }, [lang, ready]);
+
+  if (!ready) return null;
 
   return (
     <div className="container max-w-7xl mx-auto py-12">

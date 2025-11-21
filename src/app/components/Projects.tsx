@@ -21,7 +21,7 @@ export default function Projects() {
       setProjects(data)
     }
     fetchProjects()
-  }, [])
+  }, [lang]);
 
   return (
     <section className="py-20">

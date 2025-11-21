@@ -1,8 +1,13 @@
 "use client";
 
 import CookieConsent from "react-cookie-consent";
+import { useTranslation } from "react-i18next";
 
 export default function CookieBanner() {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return null;
+
   return (
     <CookieConsent
       location="bottom"
@@ -18,9 +23,9 @@ export default function CookieBanner() {
       }}
       expires={150}
     >
-      This website uses cookies to enhance the user experience.{" "}
+      {t('common.cookiesMessage')}{" "}
       <a href="/privacy-policy" className="underline">
-        Learn more
+        {t('common.learnMore')}
       </a>
     </CookieConsent>
   );
