@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "homepage": "https://aelmizeb.github.io/personal-website",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest"
   },
   "dependencies": {
     "@heroicons/react": "2.2.0",
@@ -24,7 +25,8 @@
     "react-cookie-consent": "10.0.1",
     "react-dom": "^19.2.5",
     "react-i18next": "^17.0.4",
-    "react-icons": "5.6.0"
+    "react-icons": "5.6.0",
+    "vitest": "^4.1.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
