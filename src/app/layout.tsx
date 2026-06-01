@@ -54,7 +54,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem("theme");
+                var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.classList.toggle("dark", theme === "dark" || (!theme && prefersDark));
+                document.documentElement.lang = location.pathname.split("/")[1] === "fr" ? "fr" : "en";
+              } catch {}
+            `,
+          }}
+        />
+      </head>
       <body
         className={`bg-white dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}
       >

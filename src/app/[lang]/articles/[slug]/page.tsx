@@ -3,10 +3,11 @@ import AnimatedArticle from '../../../components/articles/AnimatedArticle';
 import { getArticles, getArticleBySlug } from '@/utils/firebase';
 import { Article } from '@/types';
 import { langs } from '@/utils/constants';
+import { sanitizeCmsHtml } from '@/utils/sanitize';
 
 // Generate static paths at build time
 export async function generateStaticParams() {
-  let params: { lang: string; slug: string }[] = [];
+  const params: { lang: string; slug: string }[] = [];
 
   for (const lang of langs) {
     const articles = await getArticles(lang);
@@ -29,7 +30,7 @@ export default async function ArticleDetail({ params }: { params: { lang: string
 
   return (
     <div className="container max-w-3xl mx-auto py-12">
-      <AnimatedArticle article={article} />
+      <AnimatedArticle article={{ ...article, content: sanitizeCmsHtml(article.content) }} />
     </div>
   );
 }

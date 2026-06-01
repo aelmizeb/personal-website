@@ -1,7 +1,7 @@
 "use client";
 
 import "../../i18n";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import i18next from "i18next";
 
@@ -19,23 +19,18 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
   const pathname = usePathname();
   const router = useRouter();
 
-  const detectFromUrl = (): Lang => {
-    const segment = pathname.split("/")[1];
-    return segment === "fr" ? "fr" : "en";
-  };
+  const lang: Lang = pathname.split("/")[1] === "fr" ? "fr" : "en";
 
-  const [lang, setLangState] = useState<Lang>("en");
+  if (i18next.resolvedLanguage !== lang) {
+    void i18next.changeLanguage(lang);
+  }
 
-  // Sync to URL + sync to i18next
   useEffect(() => {
-    const detected = detectFromUrl();
-    setLangState(detected);
-    i18next.changeLanguage(detected);
-  }, [pathname]);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
-  // Redirect and sync i18next when switching
+  // Redirect and sync i18next when switching.
   const switchLang = (newLang: Lang) => {
-    setLangState(newLang);
     i18next.changeLanguage(newLang);
     router.push(`/${newLang}`);       // always home, no subpath
   };

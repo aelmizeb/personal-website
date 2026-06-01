@@ -32,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   // --- Articles per language ---
-  let articleRoutes: MetadataRoute.Sitemap = [];
+  const articleRoutes: MetadataRoute.Sitemap = [];
 
   for (const lang of langs) {
     const articles = await getArticles(lang);

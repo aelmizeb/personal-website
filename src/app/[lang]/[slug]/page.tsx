@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 import PageContent from "@/app/components/pages/PageContent";
 import { getPageBySlug, getPages } from "@/utils/firebase";
 import { langs } from '@/utils/constants';
+import { sanitizeCmsHtml } from "@/utils/sanitize";
 
 // Generate static paths at build time
 export async function generateStaticParams() {
-  let params: { lang: string; slug: string }[] = [];
+  const params: { lang: string; slug: string }[] = [];
 
   for (const lang of langs) {
     const pages = await getPages(lang);
@@ -28,7 +29,7 @@ export default async function Page({ params }: { params: { lang: string; slug: s
 
   return (
     <div className="container max-w-3xl mx-auto py-12">
-      <PageContent page={page} />
+      <PageContent page={{ ...page, content: sanitizeCmsHtml(page.content) }} />
     </div>
   );
 }

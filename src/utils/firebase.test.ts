@@ -8,11 +8,31 @@ const {
   mockGetFirestore,
 } = vi.hoisted(() => ({
   mockGetDocs: vi.fn(),
-  mockQuery: vi.fn((_col: unknown, ..._constraints: unknown[]) => ({})),
-  mockCollection: vi.fn((_db: unknown, _name: string) => ({})),
-  mockWhere: vi.fn((_f: string, _op: string, _v: unknown) => ({})),
-  mockOrderBy: vi.fn((_f: string, _dir?: string) => ({})),
-  mockLimit: vi.fn((_n: number) => ({})),
+  mockQuery: vi.fn((col: unknown, ...constraints: unknown[]) => {
+    void col;
+    void constraints;
+    return {};
+  }),
+  mockCollection: vi.fn((db: unknown, name: string) => {
+    void db;
+    void name;
+    return {};
+  }),
+  mockWhere: vi.fn((field: string, op: string, value: unknown) => {
+    void field;
+    void op;
+    void value;
+    return {};
+  }),
+  mockOrderBy: vi.fn((field: string, direction?: string) => {
+    void field;
+    void direction;
+    return {};
+  }),
+  mockLimit: vi.fn((count: number) => {
+    void count;
+    return {};
+  }),
   mockGetFirestore: vi.fn(() => ({})),
 }));
 

@@ -14,16 +14,12 @@ export default function ArticlesList() {
   const { lang } = useLanguage();
 
   const [articles, setArticles] = useState<Article[]>([]);
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     if (!ready) return;
 
-    setLoading(true);
     getArticles(lang)
       .then(setArticles)
-      .catch(err => console.error('Error loading articles:', err))
-      .finally(() => setLoading(false));
+      .catch(err => console.error('Error loading articles:', err));
   }, [lang, ready]);
 
   if (!ready) return null;

@@ -1,10 +1,13 @@
 "use client";
 
 import CookieConsent from "react-cookie-consent";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function CookieBanner() {
   const { t, ready } = useTranslation();
+  const { lang } = useLanguage();
 
   if (!ready) return null;
 
@@ -24,9 +27,12 @@ export default function CookieBanner() {
       expires={150}
     >
       {t('common.cookiesMessage')}{" "}
-      <a href="/privacy-policy" className="underline">
+      <Link
+        href={lang === "fr" ? "/fr/politique-de-confidentialite" : "/en/privacy-policy"}
+        className="underline"
+      >
         {t('common.learnMore')}
-      </a>
+      </Link>
     </CookieConsent>
   );
 }
