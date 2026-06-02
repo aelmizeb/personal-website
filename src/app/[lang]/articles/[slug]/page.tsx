@@ -29,8 +29,14 @@ export default async function ArticleDetail({ params }: { params: { lang: string
   if (!article) notFound();
 
   return (
-    <div className="container max-w-3xl mx-auto py-12">
-      <AnimatedArticle article={{ ...article, content: sanitizeCmsHtml(article.content) }} />
+    <div className="relative overflow-hidden py-10 sm:py-14">
+      <div className="absolute inset-x-0 top-0 -z-10 h-96 bg-linear-to-b from-primary/10 to-transparent" />
+      <div className="container max-w-5xl mx-auto">
+        <AnimatedArticle
+          article={{ ...article, content: sanitizeCmsHtml(article.content) }}
+          lang={lang}
+        />
+      </div>
     </div>
   );
 }

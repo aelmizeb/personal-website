@@ -78,85 +78,109 @@ pre {
   color: #f9fafb; /* light text */
 }
 
-/* Base article content */
-article {
-  max-width: 70ch;
-  margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1rem;
+/* Rich text rendered from article CMS content */
+.article-content {
+  line-height: 1.85;
+  font-size: 1.05rem;
   color: #1f2937; /* gray-800 */
 }
 
-.dark article {
+.dark .article-content {
   color: #e5e7eb; /* gray-200 */
 }
 
-/* Article images */
-.articles img {
-  max-width: 100%; /* ensures image doesn't overflow container */
-  height: auto;    /* maintain aspect ratio */
-  display: block;  /* removes inline spacing */
-  margin: 1.5rem auto; /* spacing around image */
-  border-radius: 0.5rem; /* optional: rounded corners */
-  object-fit: cover;
+.article-content > *:first-child {
+  margin-top: 0;
 }
 
-/* On mobile screens, optionally make images smaller or full width */
-@media (max-width: 640px) {
-  .articles img {
-    width: 100%;      /* full width on mobile */
-    margin: 1rem 0;   /* less vertical spacing */
-  }
+.article-content > *:last-child {
+  margin-bottom: 0;
 }
 
-/* Optional: dark mode adjustments for images with border or shadow */
-.dark .articles img {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  color: #111827;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
 }
 
-/* Headings */
-article h2 {
-  font-size: 1.5rem; /* text-2xl */
+.dark .article-content h1,
+.dark .article-content h2,
+.dark .article-content h3,
+.dark .article-content h4 {
+  color: #f9fafb;
+}
+
+.article-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3 {
+  font-size: 1.35rem;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
-article h3 {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+.article-content p {
+  margin-bottom: 1.25rem;
 }
 
-/* Paragraphs */
-article p {
-  margin-bottom: 1rem;
-}
-
-/* Lists */
-article ul {
-  list-style-type: disc;
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.25rem;
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
 }
 
-article li {
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+}
+
+.article-content li {
   margin-bottom: 0.5rem;
 }
 
-/* Links */
-article a {
+.article-content a {
   color: #2563eb; /* blue-600 */
+  font-weight: 600;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.dark article a {
+.dark .article-content a {
   color: #60a5fa; /* blue-400 */
 }
 
-/* Inline code */
-article code {
+.article-content blockquote {
+  margin: 1.75rem 0;
+  border-left: 3px solid #007aff;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.dark .article-content blockquote {
+  color: #d1d5db;
+}
+
+.article-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 1rem;
+}
+
+.article-content code {
   background-color: #f3f4f6; /* gray-100 */
   color: #111827; /* gray-900 */
   padding: 0.2em 0.4em;
@@ -165,24 +189,29 @@ article code {
   font-size: 0.875em;
 }
 
-.dark article code {
+.dark .article-content code {
   background-color: #1f2937; /* gray-800 */
   color: #f9fafb; /* gray-50 */
 }
 
-/* Block code */
-article pre {
+.article-content pre {
   background-color: #f3f4f6;
   color: #111827;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   overflow-x: auto;
   font-family: monospace;
   font-size: 0.875rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-.dark article pre {
+.article-content pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.dark .article-content pre {
   background-color: #1f2937;
   color: #f9fafb;
 }

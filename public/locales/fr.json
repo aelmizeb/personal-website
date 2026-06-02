@@ -1,7 +1,7 @@
 {
   "common": {
     "articles": "Articles",
-    "readMore": "Lire la suite →",
+    "readMore": "Lire la suite",
     "loading": "Chargement...",
     "notFound": "Page non trouvée.",
     "clients": "Clients",
@@ -36,6 +36,14 @@
     "viewProject": "Voir le projet",
     "liveDemo": "Démo en direct",
     "sourceCode": "Code source"
+  },
+  "articles": {
+    "eyebrow": "Notes techniques",
+    "description": "Réflexions, retours d'expérience et guides pratiques autour des technologies que j'utilise au quotidien.",
+    "readingTime_one": "{{count}} min de lecture",
+    "readingTime_other": "{{count}} min de lecture",
+    "backToArticles": "Retour aux articles",
+    "empty": "Aucun article n'est disponible pour le moment."
   },
   "hero": {
     "title": "Salut, je suis",

@@ -1,7 +1,7 @@
 {
   "common": {
     "articles": "Articles",
-    "readMore": "Read more →",
+    "readMore": "Read more",
     "loading": "Loading...",
     "notFound": "Page not found.",
     "clients": "Clients",
@@ -36,6 +36,14 @@
     "viewProject": "View Project",
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code"
+  },
+  "articles": {
+    "eyebrow": "Engineering notes",
+    "description": "Thoughts, lessons, and practical guides from the technologies I work with every day.",
+    "readingTime_one": "{{count}} min read",
+    "readingTime_other": "{{count}} min read",
+    "backToArticles": "Back to articles",
+    "empty": "No articles are available yet."
   },
   "hero": {
     "title": "Hi, I'm",

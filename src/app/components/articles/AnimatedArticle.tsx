@@ -3,36 +3,68 @@
 import { Article } from '@/types';
 import { motion } from 'framer-motion';
 import { fadeInDown } from '@/utils/animations';
-import { basePath } from '@/utils/constants';
+import { formatArticleDate, getArticleImageSrc, getArticleReadingTime } from '@/utils/articles';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeftIcon, CalendarDaysIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 
-export default function AnimatedArticle({ article }: { article: Article }) {
-  const imageSrc = article.image?.startsWith("http")
-    ? article.image // for external URLs
-    : `${basePath}${article.image}`; // prepend basePath for local images
+export default function AnimatedArticle({ article, lang }: { article: Article, lang: string }) {
+  const { t } = useTranslation();
 
   return (
-    <>
+    <motion.div {...fadeInDown}>
+      <Link
+        href={`/${lang}/articles`}
+        className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-gray-600 transition-colors hover:text-primary dark:text-gray-300"
+      >
+        <ArrowLeftIcon className="h-4 w-4" />
+        {t('articles.backToArticles')}
+      </Link>
+
       {article.image && (
-        <motion.div className="mb-8 flex justify-center" {...fadeInDown}>
+        <div className="relative aspect-16/7 overflow-hidden rounded-3xl bg-gray-100 shadow-lg shadow-gray-200/60 dark:bg-gray-800 dark:shadow-none">
           <Image
-            src={imageSrc}
+            src={getArticleImageSrc(article.image)}
             alt={article.title}
-            width={800}
-            height={400}
-            className="rounded-2xl shadow-lg object-cover w-full h-auto"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="object-cover"
             priority
           />
-        </motion.div>
+        </div>
       )}
 
-      <motion.h1 className="text-4xl font-bold mb-4 text-center" {...fadeInDown}>
-        {article.title}
-      </motion.h1>
+      <div className="mx-auto mt-10 max-w-3xl sm:mt-12">
+        <header>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+            {t('articles.eyebrow')}
+          </p>
+          <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
+            {article.title}
+          </h1>
+          <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
+            <span className="flex items-center gap-2">
+              <CalendarDaysIcon className="h-4 w-4" />
+              {formatArticleDate(article.date, lang)}
+            </span>
+            <span className="flex items-center gap-2">
+              <ClockIcon className="h-4 w-4" />
+              {t('articles.readingTime', { count: getArticleReadingTime(article.content) })}
+            </span>
+          </div>
+          {article.excerpt && (
+            <p className="mt-7 border-l-2 border-primary pl-5 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              {article.excerpt}
+            </p>
+          )}
+        </header>
 
-      <p className="text-center text-sm text-gray-500 mb-8">{article.date}</p>
-
-      <article dangerouslySetInnerHTML={{ __html: article.content }} />
-    </>
+        <article
+          className="article-content mt-12 border-t border-gray-200/80 pt-10 pb-6 dark:border-gray-700/80 sm:mt-16 sm:pt-12"
+          dangerouslySetInnerHTML={{ __html: article.content }}
+        />
+      </div>
+    </motion.div>
   );
 }
