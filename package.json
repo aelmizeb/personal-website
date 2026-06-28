@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "homepage": "https://aelmizeb.github.io/personal-website",
   "repository": {
     "type": "git",
@@ -19,28 +19,28 @@
   },
   "dependencies": {
     "@heroicons/react": "2.2.0",
-    "firebase": "^12.14.0",
-    "framer-motion": "12.40.0",
-    "i18next": "^26.3.0",
-    "next": "^16.2.7",
+    "firebase": "^12.15.0",
+    "framer-motion": "12.42.0",
+    "i18next": "^26.3.3",
+    "next": "^16.2.9",
     "react": "^19.2.7",
     "react-cookie-consent": "10.0.1",
     "react-dom": "^19.2.7",
     "react-i18next": "^17.0.8",
     "react-icons": "5.6.0",
-    "sanitize-html": "^2.17.4",
+    "sanitize-html": "^2.17.5",
     "server-only": "^0.0.1",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.9"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.3.0",
-    "@types/node": "25.9.1",
-    "@types/react": "19.2.16",
+    "@tailwindcss/postcss": "4.3.1",
+    "@types/node": "26.0.1",
+    "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@types/sanitize-html": "^2.16.1",
     "eslint": "9.39.4",
-    "eslint-config-next": "16.2.7",
-    "tailwindcss": "4.3.0",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "4.3.1",
     "typescript": "6.0.3"
   }
 }
