@@ -21,7 +21,7 @@ ESLint stays on version 9 because the React, import, and accessibility plugins i
 
 Articles are stored in the Firebase `articles` collection. The listing reads Firebase in the browser, while article detail pages and the sitemap are generated during `next build`. After adding an article or changing its content or slugs in Firebase, rerun **Deploy Next.js site to Pages** from the repository's Actions tab and wait for deployment to finish. Otherwise, the listing can link to an article that has not been exported yet.
 
-The deployment uses `next.config.ts` directly and passes the GitHub Pages base path through `NEXT_PUBLIC_BASE_PATH`. With `trailingSlash: true`, each exported article has an `index.html` inside its route directory. Avoid enabling automatic Next.js configuration in `actions/configure-pages`, because it can generate a separate `next.config.js` and override these settings.
+The deployment uses `next.config.ts` directly with an empty `basePath`, because `abdellatifelmizeb.com` serves the site at the domain root. Do not apply the repository prefix `/personal-website` to this deployment: it makes JavaScript and CSS requests return 404 and leaves the homepage blank. With `trailingSlash: true`, each exported article has an `index.html` inside its route directory. Avoid enabling automatic Next.js configuration in `actions/configure-pages`, because it can generate a separate `next.config.js` and override these settings.
 
 If Cloudflare is enabled, bypass caching for HTML pages and Next.js route payloads, and purge any old page or 404 responses after deployment when necessary. Keep versioned files under `/_next/static/` cacheable.
 
