@@ -53,7 +53,7 @@ export default function Projects() {
                 transition={{ delay: index * 0.1, type: 'spring', stiffness: 300 }}
                 whileHover={{ scale: 1.03 }}
               >
-                <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
+                <div className="relative aspect-video mb-4 rounded-lg overflow-hidden bg-gray-800">
                   <Image
                     src={imageSrc}
                     alt={project.title}

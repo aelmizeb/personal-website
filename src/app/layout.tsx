@@ -105,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Client-side translation loader */}
             <Navbar />
 
-            <main className="min-h-screen pt-24">{children}</main>
+            <main className="min-h-screen pt-16 dark:pt-24">{children}</main>
 
             <Footer />
             <CookieBanner />

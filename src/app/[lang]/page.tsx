@@ -10,11 +10,13 @@ export function generateStaticParams() {
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Hero />
-      <Clients />
-      <Skills />
+      <div className="container max-w-7xl mx-auto px-4">
+        <Clients />
+        <Skills />
+      </div>
       <Projects />
-    </main>
+    </div>
   );
-} 
+}

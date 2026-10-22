@@ -29,12 +29,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="site-nav fixed w-full bg-surface/90 dark:bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="site-nav fixed inset-x-0 top-0 bg-surface/90 dark:bg-dark/80 backdrop-blur-sm z-50">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href={`/${lang}`} className="text-xl font-bold text-primary">
+          <Link href={`/${lang}`} className="shrink-0 text-xl font-bold text-primary">
             <Image
               src={`${basePath}/logo.webp`}
               alt={t('navbar.logoAlt', 'Abdellatif EL MIZEB portfolio website')}
@@ -45,18 +45,18 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {Routes.map((item) => (
               <Link
                 key={item.label}
                 href={localizedHref(item)}
-                className="hover:text-primary transition-colors"
+                className="whitespace-nowrap hover:text-primary transition-colors"
               >
                 {t(`navbar.${item.label}`, item.label)}
               </Link>
             ))}
 
-            <span className="text-gray-300 dark:text-gray-600">|</span>
+            <span aria-hidden="true" className="h-5 w-px bg-surface-edge dark:bg-gray-600" />
             {/* Language Switcher */}
             <LanguageSwitcher />
 
@@ -78,7 +78,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             onClick={toggleMobileMenu}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -87,6 +87,8 @@ export default function Navbar() {
                 ? t('navbar.closeMenu', 'Close menu')
                 : t('navbar.openMenu', 'Open menu')
             }
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </motion.button>
@@ -96,11 +98,12 @@ export default function Navbar() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
+              id="mobile-navigation"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden"
+              className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain lg:hidden"
             >
               <div className="py-4 space-y-4">
                 {Routes.map((item, index) => (
