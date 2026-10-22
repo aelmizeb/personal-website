@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function ArticleDetail({ params }: { params: { lang: string, slug: string } }) {
+export default async function ArticleDetail({ params }: { params: Promise<{ lang: string; slug: string }> }) {
   const { lang, slug } = await params;
   const article = await getArticleBySlug(slug, lang);
 
