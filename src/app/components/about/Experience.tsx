@@ -33,7 +33,7 @@ export default function About() {
           animate="animate"
         >
           <motion.div 
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="surface-card dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
             transition={{ type: "spring", stiffness: 300 }}
@@ -49,7 +49,7 @@ export default function About() {
           </motion.div>
           
           <motion.div 
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="surface-card dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
             transition={{ type: "spring", stiffness: 300 }}
@@ -63,7 +63,7 @@ export default function About() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="surface-card dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
             transition={{ type: "spring", stiffness: 300 }}
@@ -79,7 +79,7 @@ export default function About() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="surface-card dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHoverSmall}
             transition={{ type: "spring", stiffness: 300 }}
@@ -94,4 +94,4 @@ export default function About() {
         </motion.div>
       </motion.section>
   )
-} 
+}

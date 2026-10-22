@@ -10,7 +10,7 @@ export default function Hero() {
   if (!ready) return <p>...</p>;
 
   return (
-    <section className="py-28">
+    <section className="hero-section py-28">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatedProfileImage />

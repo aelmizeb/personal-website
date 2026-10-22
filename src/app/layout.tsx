@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body
-        className={`bg-white dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}
+        className={`bg-bg text-text dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}
       >
         {/* GTM */}
         {GTM_ID && (

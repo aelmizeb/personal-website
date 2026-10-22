@@ -47,7 +47,7 @@ export default function Projects() {
             return (
               <motion.article
                 key={project.title}
-                className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
+                className="surface-card dark:bg-dark/50 rounded-lg shadow-md p-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, type: 'spring', stiffness: 300 }}

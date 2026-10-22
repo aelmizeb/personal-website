@@ -28,7 +28,7 @@ export default function Clients() {
           {t('common.clients')}
         </motion.h2>
         <motion.div 
-          className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center bg-white p-8 rounded-lg shadow-lg"
+          className="surface-card client-logos max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center dark:bg-white p-8 rounded-lg shadow-lg"
           variants={staggerContainer}
           initial="initial"
           animate="animate"

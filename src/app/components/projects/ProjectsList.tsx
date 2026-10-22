@@ -59,7 +59,7 @@ export default function ProjectsList() {
           return (
             <motion.div
               key={index}
-              className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
+              className="surface-card dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
               transition={{ type: "spring", stiffness: 300 }}
               
             >

@@ -5,8 +5,11 @@
   --color-secondary: #6B7280;
   --color-dark: #1F2937;
   --color-light: #F9FAFB;
-  --color-text: #000000;
-  --color-bg: #ffffff;
+  --color-text: #1e293b;
+  --color-bg: #edf2f8;
+  --color-surface: #f7f9fc;
+  --color-surface-muted: #e2eaf4;
+  --color-surface-edge: #ccd8e6;
 
   --font-sans: 'Inter', sans-serif;
 
@@ -17,11 +20,49 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Keep the original dark palette; use deeper accents on pale light surfaces. */
+:root:not(.dark) {
+  --color-primary: #005fc7;
+  --color-secondary: #526175;
+}
+
+:root:not(.dark) .hero-section {
+  background:
+    radial-gradient(ellipse at 50% 35%, #bfd6f280, transparent 68%),
+    radial-gradient(ellipse at 85% 0%, #b8dfe540, transparent 55%);
+}
+
+:root:not(.dark) .hero-section img {
+  filter: drop-shadow(0 10px 16px #234c7826);
+}
+
+:root:not(.dark) .client-logos img {
+  mix-blend-mode: multiply;
+}
+
+:root:not(.dark) .site-nav {
+  box-shadow: 0 1px 0 var(--color-surface-edge), 0 4px 20px #233b5a08;
+}
+
+:root:not(.dark) .surface-card {
+  box-shadow: 0 6px 24px #233b5a0a, 0 0 0 1px var(--color-surface-edge);
+}
+
+@media (hover: hover) {
+  :root:not(.dark) .surface-card:hover {
+    box-shadow: 0 12px 32px #233b5a14, 0 0 0 1px var(--color-surface-edge);
+  }
+}
+
 a {
   transition: all 0.2s ease;
 }
 
 @layer components {
+  .surface-card {
+    @apply bg-surface;
+  }
+
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }

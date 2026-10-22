@@ -77,7 +77,7 @@ export default function ArticlesList() {
               return (
                 <motion.article
                   key={article.slug}
-                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-shadow hover:shadow-xl dark:border-gray-700/80 dark:bg-gray-800/70"
+                  className="surface-card group flex h-full flex-col overflow-hidden rounded-3xl border border-surface-edge shadow-sm transition-shadow hover:shadow-xl dark:border-gray-700/80 dark:bg-gray-800/70"
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.08, duration: 0.45 }}
